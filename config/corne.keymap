@@ -5,10 +5,19 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        semicolon {
+            bindings = <&kp SEMI>;
+            key-positions = <33 32>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,14 +29,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W           &kp F               &kp P               &kp B        &kp J    &kp L               &kp U               &kp Y           &kp SEMICOLON  &none
-&none  &kp A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_COMMAND T  &kp G        &kp M    &mt LEFT_COMMAND N  &mt LEFT_ALT LCTRL  &mt LEFT_ALT I  &kp O          &none
-&none  &kp Z  &kp X           &kp C               &kp D               &kp V        &kp K    &kp H               &kp COMMA           &kp DOT         &kp FSLH       &none
-                              &to 1               &kp BACKSPACE       &kp SPACE    &kp RET  &sk LEFT_SHIFT      &to 2
+&none  &kp Q  &kp W           &kp F               &kp P               &kp B        &kp J    &kp L               &kp U               &kp Y           &kp APOS  &none
+&none  &kp A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_COMMAND T  &kp G        &kp M    &mt LEFT_COMMAND N  &mt LEFT_ALT LCTRL  &mt LEFT_ALT I  &kp O     &none
+&none  &kp Z  &kp X           &kp C               &kp D               &kp V        &kp K    &kp H               &kp COMMA           &kp DOT         &kp SEMI  &none
+                              &sl 1               &kp BACKSPACE       &kp SPACE    &kp RET  &sk LEFT_SHIFT      &sl 2
             >;
         };
 
-        lower_layer {
+        num_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -35,25 +44,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&none  &kp N7     &kp N5    &kp N3     &kp N1         &kp N9       &kp N8   &kp N0          &kp N2     &kp N4    &kp N6     &none
+&none  &kp LSHFT  &kp LALT  &kp RCTRL  &kp LGUI       &kp F11      &kp F12  &kp LGUI        &kp RCTRL  &kp LALT  &kp LSHFT  &none
+&none  &kp F7     &kp F5    &kp F3     &kp F1         &kp F9       &kp F8   &kp F10         &kp F2     &kp F4    &kp F6     &none
+                            &none      &kp BACKSPACE  &kp SPACE    &kp RET  &kp LEFT_SHIFT  &none
             >;
         };
 
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        sym_layer {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &kp ESC       &kp LBKT       &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp TILDE    &kp CARET      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE  &none
+&none  &kp ASTERISK  &kp AMPERSAND  &kp EQUAL        &kp COLON             &kp MINUS    &kp LESS_THAN  &kp GREATER_THAN       &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH   &none
+&none  &kp SLASH     &kp PIPE       &kp EXCLAMATION  &kp FSLH              &kp PLUS     &kp AT_SIGN    &kp DOLLAR             &kp UNDERSCORE   &kp BACKSLASH      &none      &none
+                                    &none            &kp BACKSPACE         &kp SPACE    &kp RET        &kp LEFT_SHIFT         &none
             >;
         };
     };
