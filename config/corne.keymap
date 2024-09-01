@@ -53,19 +53,19 @@
 
         sym_layer {
             bindings = <
-&none  &kp ESC      &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp CARET        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE  &none
-&none  &kp PIPE     &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH   &none
-&none  &kp AT_SIGN  &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp UNDERSCORE     &none      &none
-                                   &none           &kp BACKSPACE         &kp SPACE           &kp RET          &kp LEFT_SHIFT         &none
+&none  &kp ESC   &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp CARET        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE    &none
+&none  &kp PIPE  &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH     &none
+&none  &kp TAB   &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp UNDERSCORE     &kp AT_SIGN  &none
+                                &none           &kp BACKSPACE         &kp SPACE           &kp RET          &kp LEFT_SHIFT         &none
             >;
         };
 
         nav_layer {
             bindings = <
-&none  &kp TAB  &none     &none      &none     &none    &none  &none     &none      &none     &none  &none
-&none  &none    &kp LALT  &kp RCTRL  &kp LGUI  &none    &none  &kp LGUI  &kp RCTRL  &kp LALT  &none  &none
-&none  &none    &none     &none      &none     &none    &none  &none     &none      &none     &none  &none
-                          &none      &none     &none    &none  &none     &none
+&none  &none  &none     &none      &none          &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &kp TAB         &none      &none     &none  &none
+&none  &none  &kp LALT  &kp RCTRL  &kp LGUI       &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LGUI        &kp RCTRL  &kp LALT  &none  &none
+&none  &none  &none     &none      &none          &kp C_VOL_DN       &kp C_PREV          &kp LG(TAB)     &none      &none     &none  &none
+                        &none      &kp BACKSPACE  &kp SPACE          &kp ENTER           &kp LEFT_SHIFT  &none
             >;
         };
     };
