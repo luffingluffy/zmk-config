@@ -62,10 +62,10 @@
 
         nav_layer {
             bindings = <
-&none  &none  &none     &none      &none          &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &kp TAB         &none     &none   &none      &none
-&none  &none  &kp LALT  &kp RCTRL  &kp LGUI       &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT  &none
-&none  &none  &none     &none      &none          &kp C_VOL_DN       &kp C_PREV          &kp LG(TAB)     &none     &none   &none      &none
-                        &none      &kp BACKSPACE  &kp SPACE          &kp ENTER           &kp LEFT_SHIFT  &none
+&none  &none        &none     &none      &none          &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &none           &none     &none   &none      &none
+&none  &kp LG(TAB)  &kp LALT  &kp RCTRL  &kp LGUI       &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT  &none
+&none  &none        &none     &none      &none          &kp C_VOL_DN       &kp C_PREV          &kp TAB         &none     &none   &none      &none
+                              &none      &kp BACKSPACE  &kp SPACE          &kp ENTER           &kp LEFT_SHIFT  &none
             >;
         };
     };
