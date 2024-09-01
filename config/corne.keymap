@@ -53,10 +53,10 @@
 
         sym_layer {
             bindings = <
-&none  &kp ESC    &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp CARET        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE  &none
-&none  &kp PIPE   &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH   &none
-&none  &kp SLASH  &kp ASTERISK   &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp AT_SIGN      &kp BACKSLASH          &kp DOLLAR       &kp UNDERSCORE     &none      &none
-                                 &none           &kp BACKSPACE         &kp SPACE           &kp RET          &kp LEFT_SHIFT         &none
+&none  &kp ESC      &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp CARET        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE  &none
+&none  &kp PIPE     &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH   &none
+&none  &kp AT_SIGN  &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp UNDERSCORE     &none      &none
+                                   &none           &kp BACKSPACE         &kp SPACE           &kp RET          &kp LEFT_SHIFT         &none
             >;
         };
 
