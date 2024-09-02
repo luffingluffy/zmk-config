@@ -19,7 +19,7 @@
         };
 
         layer3 {
-            bindings = <&mo 3>;
+            bindings = <&sl 3>;
             key-positions = <36 41>;
             layers = <0>;
         };
@@ -52,9 +52,9 @@
 
             bindings = <
 &none  &kp N7     &kp N5    &kp N3     &kp N1         &kp N9       &kp N8   &kp N0          &kp N2     &kp N4    &kp N6     &none
-&none  &kp LSHFT  &kp LALT  &kp RCTRL  &kp LGUI       &kp F11      &kp F12  &kp LGUI        &kp RCTRL  &kp LALT  &kp LSHFT  &none
+&none  &sk LSHFT  &sk LALT  &sk RCTRL  &sk LGUI       &sk F11      &sk F12  &sk LGUI        &sk RCTRL  &sk LALT  &sk LSHFT  &none
 &none  &kp F7     &kp F5    &kp F3     &kp F1         &kp F9       &kp F8   &kp F10         &kp F2     &kp F4    &kp F6     &none
-                            &none      &kp BACKSPACE  &kp SPACE    &kp RET  &kp LEFT_SHIFT  &none
+                            &none      &kp BACKSPACE  &kp SPACE    &kp RET  &sk LEFT_SHIFT  &none
             >;
         };
 
@@ -63,16 +63,16 @@
 &none  &kp ESC   &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp CARET        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE    &none
 &none  &kp PIPE  &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH     &none
 &none  &kp TAB   &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp UNDERSCORE     &kp AT_SIGN  &none
-                                &none           &kp BACKSPACE         &kp SPACE           &kp RET          &kp LEFT_SHIFT         &none
+                                &none           &kp BACKSPACE         &kp SPACE           &kp RET          &sk LEFT_SHIFT         &none
             >;
         };
 
         nav_layer {
             bindings = <
 &none  &none        &none     &none      &none                     &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &none           &none     &none   &bt BT_NXT    &none
-&none  &kp LG(TAB)  &kp LALT  &kp RCTRL  &kp LGUI                  &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &none
+&none  &kp LG(TAB)  &sk LALT  &sk RCTRL  &sk LGUI                  &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &none
 &none  &none        &none     &none      &kp LS(LC(LG(NUMBER_4)))  &kp C_VOL_DN       &kp C_PREV          &kp TAB         &none     &none   &bt BT_SEL 0  &none
-                              &none      &kp BACKSPACE             &kp SPACE          &kp ENTER           &kp LEFT_SHIFT  &none
+                              &none      &kp BACKSPACE             &kp SPACE          &kp ENTER           &sk LEFT_SHIFT  &none
             >;
         };
     };
