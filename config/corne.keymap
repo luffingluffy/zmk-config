@@ -19,12 +19,6 @@
             key-positions = <34 10>;
             layers = <3>;
         };
-
-        layer3 {
-            bindings = <&sl 3>;
-            key-positions = <36 41>;
-            layers = <0>;
-        };
     };
 
     keymap {
