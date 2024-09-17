@@ -77,7 +77,7 @@
                               &none      &kp BACKSPACE             &kp SPACE          &kp ENTER           &sk LEFT_SHIFT  &none
             >;
 
-            label = "Nav";
+            label = "Controls";
         };
     };
 };
