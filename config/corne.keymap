@@ -37,6 +37,8 @@
 &none  &kp Z  &kp X           &kp C               &kp D               &kp V        &kp K    &kp H               &kp COMMA       &kp DOT         &kp SEMI  &none
                               &sl 1               &kp BACKSPACE       &kp SPACE    &kp RET  &sk LEFT_SHIFT      &sl 2
             >;
+
+            label = "Letters";
         };
 
         num_layer {
@@ -52,6 +54,8 @@
 &none  &kp F7     &kp F5    &kp F3     &kp F1         &kp F9       &kp F8   &kp F10         &kp F2     &kp F4    &kp F6     &none
                             &none      &kp BACKSPACE  &kp SPACE    &kp RET  &sk LEFT_SHIFT  &sl 3
             >;
+
+            label = "Numbers";
         };
 
         sym_layer {
@@ -61,6 +65,8 @@
 &none  &kp TAB   &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp CARET          &kp AT_SIGN  &none
                                 &sl 3           &kp BACKSPACE         &kp SPACE           &kp RET          &sk LEFT_SHIFT         &none
             >;
+
+            label = "Symbols";
         };
 
         nav_layer {
@@ -70,6 +76,8 @@
 &none  &none        &none     &none      &kp LS(LC(LG(NUMBER_4)))  &kp C_VOL_DN       &kp C_PREV          &kp TAB         &none     &none   &bt BT_SEL 0  &none
                               &none      &kp BACKSPACE             &kp SPACE          &kp ENTER           &sk LEFT_SHIFT  &none
             >;
+
+            label = "Nav";
         };
     };
 };
