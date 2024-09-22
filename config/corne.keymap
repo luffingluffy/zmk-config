@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt { flavor = "balanced"; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -18,6 +16,36 @@
             bindings = <&bt BT_CLR>;
             key-positions = <34 10>;
             layers = <3>;
+        };
+    };
+
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 30 39 18 40 41 19 7 7 8 9 10 11 19 20 21 22 23 31 32 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
         };
     };
 
@@ -32,10 +60,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W           &kp F               &kp P               &kp B        &kp J    &kp L               &kp U           &kp Y           &kp APOS  &none
-&none  &kp A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_COMMAND T  &kp G        &kp M    &mt LEFT_COMMAND N  &mt LEFT_ALT E  &mt LEFT_ALT I  &kp O     &none
-&none  &kp Z  &kp X           &kp C               &kp D               &kp V        &kp K    &kp H               &kp COMMA       &kp DOT         &kp SEMI  &none
-                              &sl 1               &kp BACKSPACE       &kp SPACE    &kp RET  &sk LEFT_SHIFT      &sl 2
+&none  &kp Q  &kp W            &kp F                &kp P                &kp B        &kp J    &kp L                &kp U            &kp Y            &kp APOS  &none
+&none  &kp A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_COMMAND T  &kp G        &kp M    &hmr LEFT_COMMAND N  &hmr LEFT_ALT E  &hmr LEFT_ALT I  &kp O     &none
+&none  &kp Z  &kp X            &kp C                &kp D                &kp V        &kp K    &kp H                &kp COMMA        &kp DOT          &kp SEMI  &none
+                               &sl 1                &kp BACKSPACE        &kp SPACE    &kp RET  &sk LEFT_SHIFT       &sl 2
             >;
 
             label = "Letters";
@@ -74,7 +102,7 @@
 &none  &none        &none     &none      &none                     &kp C_VOLUME_UP    &kp C_FAST_FORWARD  &none           &none     &none   &bt BT_NXT    &none
 &none  &kp LG(TAB)  &sk LALT  &sk RCTRL  &sk LGUI                  &kp C_MUTE         &kp C_PLAY_PAUSE    &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT     &none
 &none  &none        &none     &none      &kp LS(LC(LG(NUMBER_4)))  &kp C_VOL_DN       &kp C_PREV          &kp TAB         &none     &none   &bt BT_SEL 0  &none
-                              &none      &kp BACKSPACE             &kp SPACE          &kp ENTER           &sk LEFT_SHIFT  &none
+                              &mo 1      &kp BACKSPACE             &kp SPACE          &kp ENTER           &sk LEFT_SHIFT  &mo 2
             >;
 
             label = "Controls";
