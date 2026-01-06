@@ -21,6 +21,7 @@
         macro1 {
             bindings = <&new_macro>;
             key-positions = <1 2>;
+            layers = <3>;
         };
 
         macro2 {
@@ -71,7 +72,7 @@
         new_macro2: new_macro2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp L &kp H &kp DOT &kp N0 &kp N5 &kp FSLH &kp N1 &kp N7 &kp EXCL &kp N1>;
+            bindings = <&kp LS(N) &kp L &kp H &kp DOT &kp N0 &kp N5 &kp FSLH &kp N1 &kp N7 &kp EXCL>;
             label = "NEW_MACRO2";
         };
     };
@@ -87,9 +88,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W            &kp F                &kp P                &kp B        &kp J    &kp L                &kp U                &kp Y            &kp APOS  &none
-&none  &kp A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_COMMAND T  &kp G        &kp M    &hmr LEFT_COMMAND N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &kp O     &none
-&none  &kp Z  &kp X            &kp C                &kp D                &kp V        &kp K    &kp H                &kp COMMA            &kp DOT          &kp SEMI  &none
+&none  &kp Q  &kp W            &kp F                &kp P                &kp B        &kp J    &kp L                &kp U                &kp Y            &kp SINGLE_QUOTE  &none
+&none  &kp A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_COMMAND T  &kp G        &kp M    &hmr LEFT_COMMAND N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &kp O             &none
+&none  &kp Z  &kp X            &kp C                &kp D                &kp V        &kp K    &kp H                &kp COMMA            &kp DOT          &kp SEMI          &none
                                &sl 1                &kp BACKSPACE        &kp SPACE    &kp RET  &sk LEFT_SHIFT       &sl 2
             >;
 
@@ -104,9 +105,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N7     &kp N5    &kp N3     &kp N1         &kp N9       &kp N8   &kp N0          &kp N2     &kp N4    &kp N6     &none
+&none  &kp N1     &kp N2    &kp N3     &kp N4         &kp N5       &kp N6   &kp N7          &kp N8     &kp N9    &kp N0     &none
 &none  &sk LSHFT  &sk LALT  &sk RCTRL  &sk LGUI       &sk F11      &sk F12  &sk LGUI        &sk RCTRL  &sk LALT  &sk LSHFT  &none
-&none  &kp F7     &kp F5    &kp F3     &kp F1         &kp F9       &kp F8   &kp F10         &kp F2     &kp F4    &kp F6     &none
+&none  &kp F1     &kp F2    &kp F3     &kp F4         &kp F5       &kp F6   &kp F7          &kp F8     &kp F9    &kp F10    &none
                             &none      &kp BACKSPACE  &kp SPACE    &kp RET  &sk LEFT_SHIFT  &mo 3
             >;
 
@@ -115,10 +116,10 @@
 
         sym_layer {
             bindings = <
-&none  &kp ESC   &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE           &kp UNDER        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT           &kp GRAVE    &none
-&none  &kp PIPE  &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS           &kp EXCLAMATION  &kp QUESTION           &kp PERCENT      &kp DOUBLE_QUOTES  &kp HASH     &none
-&none  &kp TAB   &kp BACKSLASH  &kp COLON       &kp LESS_THAN         &kp GREATER_THAN    &kp SLASH        &kp ASTERISK           &kp DOLLAR       &kp CARET          &kp AT_SIGN  &none
-                                &mo 3           &kp BACKSPACE         &kp SPACE           &kp RET          &sk LEFT_SHIFT         &none
+&none  &kp ESC   &kp LBKT       &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp CARET       &kp UNDER        &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp DOUBLE_QUOTES  &none
+&none  &kp PIPE  &kp AMPERSAND  &kp EQUAL       &kp PLUS              &kp MINUS       &kp EXCLAMATION  &kp QUESTION           &kp COLON        &kp TILDE  &kp HASH           &none
+&none  &kp TAB   &kp PERCENT    &kp BACKSLASH   &kp SLASH             &kp ASTERISK    &kp LESS_THAN    &kp GREATER_THAN       &kp DOLLAR       &kp GRAVE  &kp AT_SIGN        &none
+                                &mo 3           &kp BACKSPACE         &kp SPACE       &kp RET          &sk LEFT_SHIFT         &none
             >;
 
             label = "Symbols";
